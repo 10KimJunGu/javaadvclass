@@ -1,0 +1,51 @@
+Quiz1
+
+quiz1.html을 작성하세요
+
+회원가입을 받으려고 합니다. 회원가입을 받는 html페이지를 작성하세요
+
+이름
+생년월일
+나이 
+성별
+휴대폰 번호 / 국번은 고를 수 있게
+주소
+
+자기소개
+
+초기화 단추, 제출 단추 <button>제출</button>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+	<form>
+		이름  <input type="text" name = "이름" required> <br>
+		생년월일 <input type = "text" name = "생년월일" required><br>
+		
+		나이 <input type="number" name="나이" value="20" min="1" max="120"><br>
+		<input type="radio" name="gender2" value="남">남자 
+		<input type="radio" name="gender2" value="여">여자 <br>
+		
+		휴대전화 <input type ="number" name="휴대전화"><br>
+		
+
+
+		주소 <textarea name="comment" rows="1" cols="50"></textarea> <br>
+		자기소개 <textarea name="comment" rows="10" cols="50"></textarea> <br>
+		
+
+		</select><br> 
+		<input type="reset"> <button>제출</button>radio는 중복체크 불가 <br>
+	</form>
+
+
+
+
+</body>
+</html>
