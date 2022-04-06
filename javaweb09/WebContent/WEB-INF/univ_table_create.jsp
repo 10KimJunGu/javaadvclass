@@ -6,7 +6,7 @@
 // JDBC 드라이버 로딩
 	Class.forName("com.mysql.jdbc.Driver");
 // DB연결
-	String url = "jdbc:mysql://localhost:3306/univ";
+	String url = "jdbc:mysql://localhost:3306/university";
 	String id = "root";
 	String pw = "0000";
 	
@@ -16,23 +16,22 @@
 	conn = DriverManager.getConnection(url, id, pw);
 	
 // 테이블 만들기 SQL
-
-String sql = "CREATE TABLE student("
+	String sql = "CREATE TABLE student("
 			+"hakbun int not null,"
 			+"name   varchar(10),"
+			+"gender varchar(10),"
+			+"year   tinyint,"
 			+"dept   varchar(20),"
+			+"addr   varchar(50),"
 			+"primary key(hakbun))";
-
-
-
 	pstmt = conn.prepareStatement(sql);
-	pstmt.executeUpdate();
+	pstmt.executeUpdate(); 
 	
-// DB 연결 종류
-	if(pstmt != null) pstmt.close();
-	if(conn != null) conn.close();
-
-	out.print("DB연결 문제 없음 by 10김준구");
+	
+// DB 연결 종료
+	if (pstmt != null) pstmt.close();
+	if (conn != null) conn.close();
+	
+	out.print("DB연결 문제 없음 by 00홍길동");
 	
 %>
-
